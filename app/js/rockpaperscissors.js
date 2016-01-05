@@ -43,7 +43,7 @@ function getWinner(playerMove,computerMove) {
 
     var playerMove = getPlayerMove(move);
 
-    var ComputerMove = getComputerMove(move);
+    var computerMove = getComputerMove(move);
 
     if (playerMove === computerMove) {
         winner = 'tie';
@@ -85,13 +85,20 @@ function playToFive() {
 
             if (getWinner(playerMove, computerMove) === 'player') {
                 playerWins += 1;
+                console.log('player has won 'playerWins' times!');
             }   else if (getWinner(playerMove, computerMove) === 'computer') {
                 computerWins += 1;
+                console.log('computer has won 'computerWins' times!');
             }
 
+   }
+   
+    if (playerWins > computerWins) {
+        console.log('Player Wins!!!')
+    } else if (computerWins < playerWins) {
+        console.log('Computer Wins!!!')
+    }
 
     return [playerWins, computerWins];
-
-
 }
 
