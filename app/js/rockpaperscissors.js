@@ -81,7 +81,7 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
 
-    while (playerWins < 5 || computerWins < 5) {
+    while ((playerWins < 5) || (computerWins < 5)) {
 
             if (getWinner(playerMove, computerMove) === 'player') {
                 playerWins += 1;
@@ -91,13 +91,13 @@ function playToFive() {
                 console.log('computer has won 'computerWins' times!');
             }
 
-   }
+   };
    
     if (playerWins > computerWins) {
         console.log('Player Wins!!!')
     } else if (computerWins < playerWins) {
         console.log('Computer Wins!!!')
-    }
+    };
 
     return [playerWins, computerWins];
 }
